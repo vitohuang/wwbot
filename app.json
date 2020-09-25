@@ -1,0 +1,10 @@
+{
+  name: 'WWBot',
+  script: './app.js',
+  "log_date_format": 'YYYY-MM-DD HH:mm:ss Z',
+  "max_memory_restart": '300M',
+  env: {
+		DEBUG: '*,-koa-router,-koa-router:*,-knex:*,-axm:*',
+		NODE_ENV: 'production'
+    }
+}

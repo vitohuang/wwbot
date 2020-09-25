@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Settings</title>
+	</head>
+	<body>
+		<h1>Settings</h1>
+		<form method="POST">
+			<table>
+				<thead>
+					<tr>
+						<th>Room</th>
+						<th>Incoming Webhook</th>
+					</tr>
+				</thead>
+				<body>
+				<% spaces.forEach(space => { %>
+					<tr>
+						<td><%= space.display_name %>:</td>
+
+						<td>
+							<input name="settings[<%= space.name %>][webhook]" value="<%= space.incoming_webhook %>" />
+						</td>
+					</tr>
+				<% }) %>
+				</body>
+			</table>
+
+			<div>
+				<button type="submit">
+					Save
+				</button>
+			</div>
+		</form>
+	</body>
+</html>

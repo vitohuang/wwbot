@@ -1,0 +1,44 @@
+{
+  "name": "WWBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production knex migrate:latest --env production && node app.js",
+    "dev": "DEBUG=* nodemon app.js",
+    "test": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^9.4.0",
+    "agenda": "^3.1.0",
+    "axios": "^0.19.2",
+    "basic-auth": "^2.0.1",
+    "capture-website": "^1.2.1",
+    "cron-validator": "^1.1.1",
+    "date-fns": "^2.15.0",
+    "date-fns-tz": "^1.0.10",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "http-auth": "^3.2.4",
+    "knex": "^0.21.5",
+    "koa": "^2.13.0",
+    "koa-basic-auth": "^4.0.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-ejs": "^4.3.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
+    "pg": "^8.3.3",
+    "sharp": "^0.26.0",
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "sqlite3": "^4.0.9"
+  }
+}
